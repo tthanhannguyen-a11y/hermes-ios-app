@@ -1,0 +1,25 @@
+name: HermesApp
+targets:
+  HermesApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: HermesApp
+    settings:
+      base:
+        INFOPLIST_FILE: HermesApp/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.hermes.dashboard
+        SWIFT_VERSION: "5.9"
+    dependencies: []
+  HermesAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: HermesAppTests
+    dependencies:
+      - target: HermesApp
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
